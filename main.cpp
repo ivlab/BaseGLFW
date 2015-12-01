@@ -44,7 +44,7 @@ static void buttoncb(GLFWwindow* window, int button, int action, int mods)
 int main(void)
 {
 	//VRNetClient client("134.84.121.29", "3490");
-	VRNetClient client("localhost", "19999");
+	VRNetClient client("localhost", "3490");
 
     GLFWwindow* window;
     glfwSetErrorCallback(error_callback);
