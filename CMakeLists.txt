@@ -130,6 +130,7 @@ endif()
 
 # Build Target
 add_executable ( ${PROJECT_NAME} ${HEADERFILES} ${SOURCEFILES} )
+set_target_properties(${PROJECT_NAME} PROPERTIES DEBUG_POSTFIX "d")
 
 target_link_libraries(${PROJECT_NAME} ${GLFW_LIBRARY} ${OPENGL_LIBRARIES} ${LIBS_ALL})
 add_dependencies( ${PROJECT_NAME} glfw)
