@@ -40,8 +40,8 @@ endif()
 #   endif (${CMAKE_SYSTEM_NAME} MATCHES "Windows")
    
 set(glfw_build_dir ${CMAKE_BINARY_DIR}/glfw)
-set(glfw_stamp_dir ${glfw_checkout_Dir}/build/${CMAKE_BUILD_TYPE}/stamp)
-set(glfw_tmp_dir ${glfw_checkout_Dir}/build/${CMAKE_BUILD_TYPE}/tmp)
+set(glfw_stamp_dir ${glfw_build_dir}/stamp)
+set(glfw_tmp_dir ${glfw_build_dir}/tmp)
    
 ExternalProject_add(glfw
 		PREFIX ${glfw_PREFIX}
