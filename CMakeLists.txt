@@ -26,7 +26,7 @@ make_directory(${glfw_checkout_Dir})
 include(ExternalProject)
 
 set(glfw_PREFIX "${glfw_checkout_Dir}")
-set(glfw_INSTALL_DIR "${glfw_checkout_Dir}/install")
+set(glfw_INSTALL_DIR "${CMAKE_INSTALL_PREFIX}/glfw")
 
 set(glfw_CMAKE_ARGS -DCMAKE_INSTALL_PREFIX=${glfw_INSTALL_DIR} -DUSE_MSVC_RUNTIME_LIBRARY_DLL=ON -DGLFW_BUILD_DOCS=OFF)
 set(glfw_DIR "${glfw_INSTALL_DIR}")
