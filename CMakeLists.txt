@@ -39,6 +39,10 @@ endif()
 #		set(GIT_EXECUTABLE "C:/Program Files (x86)/Git/bin/git.exe")
 #   endif (${CMAKE_SYSTEM_NAME} MATCHES "Windows")
    
+set(glfw_build_dir ${CMAKE_BINARY_DIR}/glfw)
+set(glfw_stamp_dir ${glfw_checkout_Dir}/build/${CMAKE_BUILD_TYPE}/stamp)
+set(glfw_tmp_dir ${glfw_checkout_Dir}/build/${CMAKE_BUILD_TYPE}/tmp)
+   
 ExternalProject_add(glfw
 		PREFIX ${glfw_PREFIX}
 		GIT_REPOSITORY https://github.com/ivlab/glfw.git
@@ -46,6 +50,9 @@ ExternalProject_add(glfw
 		INSTALL_DIR ${glfw_INSTALL_DIR}
 		CMAKE_ARGS ${glfw_CMAKE_ARGS}
 		UPDATE_COMMAND ""
+		TMP_DIR ${glfw_tmp_dir}
+		STAMP_DIR ${glfw_stamp_dir}
+		BINARY_DIR ${glfw_build_dir}
 )
  
 set_property(TARGET glfw PROPERTY FOLDER "Dependencies")
